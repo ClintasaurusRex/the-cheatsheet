@@ -136,4 +136,29 @@ Parameters:
     Use Case: Filtering out certain elements, e.g., finding all even numbers in an array.
 
 
-## Hello hello its me
+## Asynchronous Callback
+Callbacks are particularly useful in asynchronous operations, such as reading files, making HTTP requests, or handling events.
+
+function fetchData(callback) {
+  setTimeout(() => {
+    console.log("Data fetched!");
+    callback();
+  }, 2000);
+}
+
+function processData() {
+  console.log("Processing data...");
+}
+
+fetchData(processData);
+
+// Output after 2 seconds:
+// Data fetched!
+// Processing data...
+
+In this example:
+
+    fetchData simulates an asynchronous operation using setTimeout.
+    processData is passed as a callback to fetchData.
+    After 2 seconds, fetchData logs "Data fetched!" and then calls processData, which logs "Processing data...".
+
