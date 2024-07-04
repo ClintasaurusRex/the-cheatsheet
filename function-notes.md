@@ -4,11 +4,11 @@
 2.Function Name: Provide a name for the function, e.g., greet.
 3.Parameters: Inside parentheses (), define any parameters the function takes, e.g., name.
 4.Function Body: Inside curly braces {}, write the code that the function will execute. This can include statements, expressions, and a return statement if the function returns a value.
-<!-- 
-const greet = (greet) => {
-  return "Hello, " + name + "!"
-} -->
-<!-- console.log(greet("Alice")); // Output: Hello, Alice! -->
+
+    const greet = (greet) => {
+      return "Hello, " + name + "!"
+    }
+      console.log(greet("Alice")); // Output: Hello, Alice!
 
 
 ## Function Expression
@@ -16,40 +16,40 @@ const greet = (greet) => {
 2.Function Keyword: Use the function keyword to define the function.
 3.Parameters and Body: Define the parameters and function body as usual.
 
-<!-- const add = function(a, b) {
-  return a + b;
-};
-console.log(add(5, 3)); // Output: 8 -->
+    const add = function(a, b) {
+      return a + b;
+    };
+    console.log(add(5, 3)); // Output: 8
 
 ## Arrow Functions
 1.Assign to Variable: Assign an arrow function to a variable, e.g., multiply.
 2.Arrow Syntax: Use the arrow => to separate the parameter list from the function body.
 3.Parameters and Body: Define the parameters and function body. For single expressions, you can omit the curly braces and the return keyword.
 
-<!-- const multiply = (a, b) => {
-  return a + b;
-};
-console.log(multiply(4, 2)); // Output: 8 -->
+    const multiply = (a, b) => {
+      return a + b;
+    };
+    console.log(multiply(4, 2)); // Output: 8
 
 
 ## Immediately Invoked Function Expression (IIFE)
 1.Define Function: Wrap a function declaration in parentheses.
 2.Invoke Immediately: Follow the function declaration with another set of parentheses () to immediately invoke the function.
 
-<!-- (function() {
-  console.log("This function runs immediately!");
-})(); -->
+      (function() {
+        console.log("This function runs immediately!");
+      })();
 
 
 ## Function with Default Parameters
 1. Default Parameters: Assign default values to parameters directly in the parameter list.
 2.Function Body: Define the function body as usual.
 
-<!-- function greet(name = "Guest") {
-  return "Hello, " + name + "!";
-} -->
-<!-- console.log(greet()); // Output: Hello, Guest!
-console.log(greet("Alice")); // Output: Hello, Alice! -->
+      function greet(name = "Guest") {
+        return "Hello, " + name + "!";
+      }
+      console.log(greet()); // Output: Hello, Guest!
+      console.log(greet("Alice")); // Output: Hello, Alice!
 
 ## Maps method
 1. The .map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
@@ -66,15 +66,15 @@ Parameters:
 5.thisArg (optional): Value to use as this when executing callback.
 
 Example:
-<!-- const numbers = [1, 2, 3, 4, 5];
-const doubled = numbers.map(number => number * 2);
-console.log(doubled); // Output: [2, 4, 6, 8, 10] -->
+        const numbers = [1, 2, 3, 4, 5];
+        const doubled = numbers.map(number => number * 2);
+        console.log(doubled); // Output: [2, 4, 6, 8, 10]
 
 ## Reduce Method
 The .reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 
 Syntax:
-<!-- array.reduce(callback(accumulator, currentValue, index, array), initialValue); -->
+        array.reduce(callback(accumulator, currentValue, index, array), initialValue);
 
 Parameters:
 
@@ -92,16 +92,16 @@ Parameters:
 
 Example:
 
-<!-- const numbers = [1, 2, 3, 4, 5];
-const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-console.log(sum); // Output: 15 -->
+      const numbers = [1, 2, 3, 4, 5];
+      const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+      console.log(sum); // Output: 15 
 
 ## Filter Method
 
 The .filter() method creates a new array with all elements that pass the test implemented by the provided function.
 
 Syntax:
-<!-- array.filter(callback(element, index, array), thisArg); -->
+      array.filter(callback(element, index, array), thisArg); 
 
 Parameters:
 
@@ -118,8 +118,8 @@ Parameters:
     Example:
 
     const numbers = [1, 2, 3, 4, 5];
-const evenNumbers = numbers.filter(number => number % 2 === 0);
-console.log(evenNumbers); // Output: [2, 4]
+    const evenNumbers = numbers.filter(number => number % 2 === 0);
+    console.log(evenNumbers); // Output: [2, 4]
 
 ## Summery
 
@@ -134,3 +134,6 @@ console.log(evenNumbers); // Output: [2, 4]
 .filter(): Creates a new array with elements that pass a test.
 
     Use Case: Filtering out certain elements, e.g., finding all even numbers in an array.
+
+
+## Hello hello its me
