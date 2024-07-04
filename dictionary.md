@@ -7,6 +7,15 @@ TCP based communication allows two machines to establish an open channel for two
 ## Arrow Function: A shorthand way to write functions using the => syntax.
 const add = (a, b) => a + b;
 
+## JSON (JavaScript Object Notation)
+
+JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is commonly used for transmitting data in web applications between a server and a client.
+Key Characteristics of JSON:
+
+    Text-based Format: JSON is a text-based format, making it easy to read and write.
+    Language Independent: While it is based on JavaScript, JSON is language-independent and can be used with most programming languages.
+    Structured Data: JSON represents data in a structured way, making it easy to parse and generate.
+
 ## JSON is a data format that underpins many modern web services. It stands for JavaScript Object Notation, and it's actually a subset of the JavaScript language.
 
     JSON is built on two structures:
@@ -172,6 +181,14 @@ let {name, age} = {name: 'Alice', age: 25}; // Object destructuring
 element.addEventListener('click', function() {
   console.log('Element clicked!');
 });
+
+## API - App Programming Interface
+
+
+In the simplest terms, APIs are sets of requirements that govern how one application can talk to another. APIs aren’t at all new; whenever you use a desktop or laptop, APIs are what make it possible to move information between programs—for instance, by cutting and pasting a snippet of a LibreOffice document into an Excel spreadsheet. System-level APIs makes it possible for applications like LibreOffice to run on top of an OS like Windows in the first place.
+
+On the Web, APIs make it possible for big services like Google Maps or Facebook to let other apps “piggyback” on their offerings. Think about the way Yelp, for instance, displays nearby restaurants on a Google Map in its app, or the way some video games now let players chat, post high scores and invite friends to play via Facebook, right there in the middle of a game.
+
 
 
 ## Fetch API: An interface for making HTTP requests in web browsers.
