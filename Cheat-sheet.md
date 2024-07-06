@@ -449,3 +449,246 @@ console.log(median([1, 2, 3, 4, 5])); // Output: 3
 console.log(median([1, 2, 3, 4, 5, 6])); // Output: 3.5
 
 
+## What is a Promise?
+
+A Promise is an object representing the eventual completion or failure of an asynchronous operation. It allows you to write asynchronous code in a more synchronous fashion, making it easier to manage and understand.
+
+let promise = new Promise((resolve, reject) => {
+  // asynchronous operation
+  if (success) {
+    resolve(value);  // fulfilled
+  } else {
+    reject(error);   // rejected
+  }
+});
+
+Promise States-----------------------------------------------
+
+    Pending: Initial state, neither fulfilled nor rejected.
+    Fulfilled: The operation completed successfully.
+    Rejected: The operation failed.
+
+    Handling a Promise---------------------------------------------
+.then()
+
+Executes when the promise is fulfilled.
+
+myPromise.then((value) => {
+  console.log(value); // Success!
+});
+
+.catch()
+
+Executes when the promise is rejected.
+
+
+
+myPromise.catch((error) => {
+  console.error(error); // Error!
+});
+
+.finally()
+
+Executes regardless of the promise's outcome (fulfilled or rejected).
+
+
+
+myPromise.finally(() => {
+  console.log("Promise completed");
+});
+
+JavaScript Promises Cheat Sheet
+What is a Promise?
+
+A Promise is an object representing the eventual completion or failure of an asynchronous operation. It allows you to write asynchronous code in a more synchronous fashion, making it easier to manage and understand.
+Basic Promise Syntax
+
+javascript
+
+let promise = new Promise((resolve, reject) => {
+  // asynchronous operation
+  if (success) {
+    resolve(value);  // fulfilled
+  } else {
+    reject(error);   // rejected
+  }
+});
+
+Promise States
+
+    Pending: Initial state, neither fulfilled nor rejected.
+    Fulfilled: The operation completed successfully.
+    Rejected: The operation failed.
+
+Creating a Promise
+
+javascript
+
+let myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Success!"); // fulfilled
+    // or
+    // reject("Error!"); // rejected
+  }, 1000);
+});
+
+Handling a Promise
+.then()
+
+Executes when the promise is fulfilled.
+
+javascript
+
+myPromise.then((value) => {
+  console.log(value); // Success!
+});
+
+.catch()
+
+Executes when the promise is rejected.
+
+javascript
+
+myPromise.catch((error) => {
+  console.error(error); // Error!
+});
+
+.finally()
+
+Executes regardless of the promise's outcome (fulfilled or rejected).
+
+javascript
+
+myPromise.finally(() => {
+  console.log("Promise completed");
+});
+
+Chaining Promises
+
+Promises can be chained to handle sequences of asynchronous operations.
+
+javascript
+
+myPromise
+  .then((value) => {
+    console.log(value); // Success!
+    return "Next step";
+  })
+  .then((nextValue) => {
+    console.log(nextValue); // Next step
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+Handling Multiple Promises
+Promise.all()
+
+Waits for all promises to be fulfilled and returns an array of their results. If any promise is rejected, it returns the reason of the first rejected promise.
+
+javascript
+
+let promise1 = Promise.resolve("First");
+let promise2 = Promise.resolve("Second");
+
+Promise.all([promise1, promise2])
+  .then((values) => {
+    console.log(values); // ["First", "Second"]
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+Promise.race()
+
+Returns the result of the first promise to be fulfilled or rejected.
+
+javascript
+
+let promise1 = new Promise((resolve) => setTimeout(resolve, 100, "First"));
+let promise2 = new Promise((resolve) => setTimeout(resolve, 200, "Second"));
+
+Promise.race([promise1, promise2])
+  .then((value) => {
+    console.log(value); // "First"
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+Creating a Promise-based Function
+
+javascript
+
+function fetchData(url) {
+  return new Promise((resolve, reject) => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => resolve(data))
+      .catch((error) => reject(error));
+  });
+}
+
+fetchData("https://api.example.com/data")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error("Error fetching data:", error);
+  });
+
+Using async and await
+
+async and await provide a more readable and concise way to work with promises.
+async Function
+
+An async function returns a promise.
+
+javascript
+
+async function myAsyncFunction() {
+  return "Hello";
+}
+
+myAsyncFunction().then((value) => {
+  console.log(value); // Hello
+});
+
+await Expression
+
+The await expression pauses the execution of an async function until the promise is settled.
+
+javascript
+
+async function fetchData(url) {
+  try {
+    let response = await fetch(url);
+    let data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
+
+fetchData("https://api.example.com/data");
+
+## From ISS challenge
+
+const fetchMyIP = () => {
+  const url = 'https://api.ipify.org?format=json';
+  
+  return new Promise((resolve, reject) => {
+    needle.get(url, (error, response, body) => {
+      if (error) {
+        reject(error);
+        return;
+
+
+Summary
+
+    Promises provide a way to handle asynchronous operations in JavaScript.
+    States: Pending, Fulfilled, Rejected.
+    Methods: .then(), .catch(), .finally().
+    Chaining: Allows handling sequences of asynchronous operations.
+    Multiple Promises: Promise.all(), Promise.race().
+    Async/Await: Syntactic sugar for promises, making asynchronous code more readable.
