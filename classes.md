@@ -23,6 +23,7 @@ Superclass (Parent class)
 A superclass is a class that is inherited from.
 It contains common attributes and methods that can be shared by multiple subclasses.
 Promotes code reuse and establishes a hierarchical relationship between classes.
+
 Syntax (Java example):
 
 public class Vehicle {
@@ -45,6 +46,7 @@ Subclass (Child class)
 A subclass is a class that inherits from a superclass.
 It can add new attributes and methods or override existing ones from the superclass.
 Allows for specialization and extension of the superclass functionality.
+
 Syntax (Java example):
 // Subclass (Child class)
 public class Car extends Vehicle {
