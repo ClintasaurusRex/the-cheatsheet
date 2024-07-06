@@ -63,23 +63,28 @@ public class Car extends Vehicle {
 
 
 
-Getters and Setters
+Getters and Setters:
+
 Getters and setters are methods used to access and modify private attributes of a class.
 
-Getters
+Getters:
+
 Used to retrieve the value of a private attribute.
 Usually start with "get" followed by the attribute name.
 Syntax:
+
 public String getMake() {
     return make;
 }
 
 
 
-Setters
+Setters:
+
 Used to set or modify the value of a private attribute.
 Usually start with "set" followed by the attribute name.
 Often include parameter validation.
+
 Syntax:
 public void setMake(String make) {
     if (make != null && !make.isEmpty()) {
@@ -89,7 +94,8 @@ public void setMake(String make) {
 
 
 
-Benefits of Getters and Setters
+Benefits of Getters and Setters:
+
 Encapsulation: Control access to class attributes.
 Validation: Ensure data integrity by validating input in setters.
 Flexibility: Can modify internal implementation without affecting external code.
@@ -98,37 +104,33 @@ Read-only or write-only access: Can provide only getter (read-only) or only sett
 This cheat sheet provides a quick reference for the core concepts of classes, inheritance (superclass and subclass), and getters and setters in object-oriented programming. The examples are in Java, but the concepts apply to most object-oriented languages.
 
 ### Getters:
-// A getter is like peeking into your piggy bank to see how much money is inside.
-// You're not putting money in or taking it out, just looking at what's there.
-// In programming, a getter lets you safely check the value of a private variable without directly accessing it.
-// Setters:
 
-// A setter is like putting money into your piggy bank through a special slot.
-// You can't just open the piggy bank and throw money in; you have to use this slot.
-// In programming, a setter lets you safely change the value of a private variable.
-// Why use them?gy bank to see how much money is inside.
-// You're not putting money in or taking it out, just looking at what's there.
-// In programming, a getter lets you safely check the value of a private variable without directly accessing it.
-// Setters:
+A getter is like peeking into your piggy bank to see how much money is inside.
+You're not putting money in or taking it out, just looking at what's there.
+In programming, a getter lets you safely check the value of a private variable without directly accessing it.
 
-// A setter is like putting money into your piggy bank through a special slot.
-// You can't just open the piggy bank and throw money in; you have to use this slot.
-// In programming, a setter lets you safely change the value of a private variable.
-// Why use them?
+Setters:
+
+A setter is like putting money into your piggy bank through a special slot.
+You can't just open the piggy bank and throw money in; you have to use this slot.
+In programming, a setter lets you safely change the value of a private variable.
+Why use them?gy bank to see how much money is inside.
+You're not putting money in or taking it out, just looking at what's there.
+In programming, a getter lets you safely check the value of a private variable without directly accessing it.
 
 Control:
 
-// It's like having a piggy bank with a lock. You control who can see or change what's inside.
-// In code, this helps prevent accidental changes to important data.
-// Validation:
+It's like having a piggy bank with a lock. You control who can see or change what's inside.
+In code, this helps prevent accidental changes to important data.
+Validation:
 
-// Imagine your piggy bank only accepts certain coins. The slot (setter) checks each coin before letting it in.
-// In programming, setters can check if a new value is valid before changing the variable.
-// Flexibility:
+Imagine your piggy bank only accepts certain coins. The slot (setter) checks each coin before letting it in.
+In programming, setters can check if a new value is valid before changing the variable.
+Flexibility:
 
-// If you decide to change how your piggy bank works inside, as long as the slot and peephole stay the same, nobody needs to know.
-// In code, you can change how data is stored or calculated without affecting other parts of the program.
-// So, getters and setters are like a safe, controlled way to interact with the "piggy bank" of your object's private data, allowing you to look
+If you decide to change how your piggy bank works inside, as long as the slot and peephole stay the same, nobody needs to know.
+In code, you can change how data is stored or calculated without affecting other parts of the program.
+So, getters and setters are like a safe, controlled way to interact with the "piggy bank" of your object's private data, allowing you to look
 
 ### ACCOUNTS----------------------------------
 
